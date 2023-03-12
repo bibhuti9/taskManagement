@@ -1,31 +1,22 @@
 import React from 'react';
-import {StyleSheet, Text, ScrollView} from 'react-native';
+import {StyleSheet, Text, FlatList} from 'react-native';
 import {brtsName} from './scr/references/brtsRoutes';
 export default function App() {
   return (
-    <ScrollView style={styles.viewStyle}>
-      {brtsName.map(val => {
-        return <Text>{val.name}</Text>;
-      })}
-    </ScrollView>
+    <FlatList
+      data={brtsName}
+      keyExtractor={item => item.name}
+      renderItem={({item}) => <Text style={styles.textStyle}>{item.name}</Text>}
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  viewStyle: {
-    margin: 10,
-    padding: 10,
-    borderRadius: 20,
-    backgroundColor: '#fff',
-    shadowColor: '#000',
-    shadowOpacity: 0.4,
-    shadowOffset: {
-      width: 0,
-      height: 0,
-    },
-    shadowRadius: 4,
-    elevation: 4,
+  textStyle: {
     borderWidth: 1,
+    margin: 5,
+    padding: 10,
+    borderRadius: 10,
   },
 });
 
@@ -37,6 +28,6 @@ return Component
 <Image/>
 <TextInput/>
 <Button/> | <TouchableOpacity></TouchableOpacity>
-
+FlatList
 
 */
