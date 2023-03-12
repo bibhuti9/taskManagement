@@ -5,6 +5,7 @@ export default function App() {
     <View>
       <Text>Hello World</Text>
       <Text>Panchu nahak</Text>
+      <Text>Panchu nahak</Text>
     </View>
   );
 }
