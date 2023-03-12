@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 export default function App() {
   return (
     <View>
       <Text>Hello World</Text>
-      <Text>Panchu nahak</Text>
-      <Text>Panchu nahak</Text>
+      <View>
+        <Button title="Edit" />
+      </View>
     </View>
   );
 }
