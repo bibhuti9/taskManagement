@@ -1,17 +1,23 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, Image} from 'react-native';
 export default function App() {
   return (
     <View style={styles.viewStyle}>
-      <Text style={styles.textStyle}>Hello World</Text>
-      <Text style={styles.textStyle}>Hello World</Text>
-      <Text style={styles.textStyle}>Hello World</Text>
-      <Text style={styles.textStyle}>Hello World</Text>
+      <Image
+        resizeMode="cover"
+        style={styles.imageStyle}
+        source={{
+          uri: 'https://fastly.picsum.photos/id/994/300/300.jpg?hmac=GDm1Mpq1ylmjwx5Dv9u-l1nNEAKFDBQyanBzp7Nl4yg',
+        }}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  imageStyle: {
+    height: 300,
+  },
   textStyle: {
     fontSize: 25,
     color: 'green',
@@ -20,7 +26,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   viewStyle: {
-    flex: 1,
     margin: 10,
     padding: 10,
     borderRadius: 20,
