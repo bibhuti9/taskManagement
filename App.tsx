@@ -1,30 +1,17 @@
 import React from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
+import {StyleSheet, Text, ScrollView} from 'react-native';
+import {brtsName} from './scr/references/brtsRoutes';
 export default function App() {
   return (
-    <View style={styles.viewStyle}>
-      <Image
-        resizeMode="cover"
-        style={styles.imageStyle}
-        source={{
-          uri: 'https://fastly.picsum.photos/id/994/300/300.jpg?hmac=GDm1Mpq1ylmjwx5Dv9u-l1nNEAKFDBQyanBzp7Nl4yg',
-        }}
-      />
-    </View>
+    <ScrollView style={styles.viewStyle}>
+      {brtsName.map(val => {
+        return <Text>{val.name}</Text>;
+      })}
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  imageStyle: {
-    height: 300,
-  },
-  textStyle: {
-    fontSize: 25,
-    color: 'green',
-    marginVertical: 5,
-    borderWidth: 1,
-    flex: 1,
-  },
   viewStyle: {
     margin: 10,
     padding: 10,
